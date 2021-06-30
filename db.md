@@ -1,15 +1,16 @@
 # Car setup
 
-- id  INT
-- Brand VARCHAR(20)
-- Model VARCHAR(20)
-- Description VARCHAR(255)
-- Price DECIMAL(8,2)
-- Year YEAR
-- isSecondHand TINYINT  <zero/one>
-- EngineType VARCHAR(20)
-- Km DECIMAL(8,2)
-- License Plate CHAR(7)
-- Airbag TINYINT 
-- Tyres VARCHAR(30)
-- DateLastCheckup DATE
+- id  INT PRIMARY_KEY NOTNULL INDEX UNIQUE
+- Brand VARCHAR(20) NOTNULL
+- Model VARCHAR(20) NULL
+- Description VARCHAR(255) NULL
+- Price DECIMAL(8,2) NULL
+- Year YEAR NULL
+- isSecondHand TINYINT  <zero/one> NULL DEFAULT(0)
+- EngineType VARCHAR(20) NULL
+- Km DECIMAL(8,2) NULL
+- License Plate CHAR(7) NOTNULL UNIQUE
+- Airbag TINYINT NULL DEFAULT(0)
+- A/C TINYINT NULL DEFAULT(0)
+- Tyres VARCHAR(30) NULL
+- DateLastCheckup DATE NULL
